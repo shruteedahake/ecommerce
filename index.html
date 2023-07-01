@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COZArt</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header {
+            background-color: #d8d8f1;
+            background-image: url('10.jpg');
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+			justify-content: space-between;
+        }
+        
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 35px;
+            margin-right: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 25px;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+			justify-content: space-between;
+
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav li {
+            margin: 0 10px;
+        }
+        
+        nav li a {
+            color: white;
+            text-decoration:none;
+			font-size: 17px;
+        }
+        
+        nav li a:hover{
+            color:aqua;
+        }
+
+		.icons{
+			font-size: 17px;
+		}
+		.search-icn{
+			margin-right: 20px;
+		}
+		.search-icn:hover{
+			cursor: pointer;
+			color: aqua;
+		}
+		.cart-icn{
+			margin-right: 20px;
+		}
+		.cart-icn:hover{
+			cursor: pointer;
+			color: aqua;
+		}
+        
+        .cart {
+        margin-left: 20px;
+        }
+        
+        .cart a {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        }
+        
+        .cart span {
+        background-color: white;
+        color: #333;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+        font-weight: bold;
+        }
+        
+        .search {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        }
+        
+        .search form {
+        display: flex;
+        align-items: center;
+        }
+        
+        .search input {
+        border: none;
+        border-bottom: 2px solid #333;
+        padding: 5px;
+        margin-right: 5px;
+        }
+        
+        .search button {
+        border: none;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        cursor: pointer;
+        }
+        
+        .hero {
+        background-image: url('10.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 700px;
+        display: flex;
+        align-items:end;
+        justify-content: center;
+        }
+        
+        .hero-text {
+        padding: 50px;
+        text-align: center;
+        color: white;
+        }
+        
+        .hero-text h2 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        }
+        
+        .hero-text p {
+        font-size: 24px;
+        margin-bottom: 40px;
+        }
+        
+        .button {
+        background-color: #c5c4ed;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        }
+        
+        .button:hover {
+            background-color: #0d0c3d;
+            color: white;;
+        }
+        
+        .featured {
+        padding: 50px;
+        text-align: center;
+        background-color: #c5c4ed;
+        }
+        
+        .featured h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+        }
+        
+        .product-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        
+        .product {
+        margin: 20px;
+        text-align: center;
+        }
+        
+        .product img {
+        height: 300px;
+        width: 200px;
+        margin-bottom: 10px;
+        }
+        
+        .product h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        }
+        
+        .price {
+        font-size: 15px;
+        margin-bottom: 20px;
+        }
+        
+        .product a.button {
+            background-color: #ffffff;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        }
+        
+        .product a.button:hover {
+        background-color: #0d0c3d;
+            color: white;
+        }
+        
+        footer {
+        background-color:black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 50px;
+        }
+        
+        .featured h3{
+            font-size: 20px;
+        } 
+          
+        .product img {
+           transition: all 0.3s ease;
+        } 
+          
+        .product:hover img {
+            filter: brightness(90%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+            transform: scale(1.1);
+          } 
+		         
+    </style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="1.jpg" alt="Ecommerce Logo">
+			<h1><b>COZ</b> Art</h1>
+		</div>
+		<div>
+			<nav class="navbar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">Features</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="icons">
+			<i class="fa fa-search search-icn" aria-hidden="true"></i>
+			<i class="fa fa-shopping-cart cart-icn" aria-hidden="true"></i>
+		</div>
+	</header>
+
+	<section class="hero">
+		<div class="hero-text">
+			<h2>Shop Now</h2>
+			<p>Discover the latest products and deals</p>
+			<a href="#" class="button">Shop Now</a>
+		</div>
+	</section>
+
+	<section class="featured">
+		<h2>Product Overview</h2>
+		<h3>Men's Section</h3>
+		<h3>ZARA</h3>
+		<div class="product-list">
+			<div class="product">
+				<img src="zara1.jpg" alt="Product 3">
+				<p>Winter Wear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="zara2.jpg" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="zara3.jpg" alt="Product 3">
+				<p>Casuals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="zara4.jpg" alt="Product 3">
+				<p>Winter Coats</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="zara5.jpg" alt="Product 3">
+				<p>Hoodies</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+        <br><br>
+		<h3>H&M</h3>
+		<div class="product-list">
+			<div class="product">
+				<img src="hnm1.jpg" alt="Product 3">
+				<p>Designer Shirts</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="hnm2.jpg" alt="Product 3">
+				<p>PartyWear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="hnm3.jpg" alt="Product 3">
+				<p>Jackets</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="hnm4.jpg" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="hnm5.webp" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+        <br><br>
+    
+		<h3>Women's Section</h3>
+		<h3>ZARA</h3>
+		<div class="product-list">
+			<div class="product">
+				<img src="h1.jpg" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="h2.jpg" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="h3.jpg" alt="Product 3">
+				<p>Traditional</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="h4.jpg" alt="Product 3">
+				<p>Traditional</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="h6.jpg" alt="Product 3">
+				<p>Top</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+        <br><br>
+
+		<h3>H&M</h3>
+		<div class="product-list">
+			<div class="product">
+				<img src="z1.jpg" alt="Product 3">
+				<p>Party Wear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="z2.webp" alt="Product 3">
+				<p>Formals</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="z3.jpg" alt="Product 3">
+				<p>Party Wear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="z4.jpg" alt="Product 3">
+				<p>Party Wear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="z5.jpg" alt="Product 3">
+				<p>Party Wear</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+        <br><br>
+
+		<h3>Shoes Section</h3>
+		<div class="product-list">
+			<div class="product">
+				<img src="jordan.jpg" alt="Product 3">
+				<p>Jordan</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="sparx.jpg" alt="Product 3">
+				<p>Sparx</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="converse.jpg" alt="Product 3">
+				<p>Converse</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="adidas.jpg" alt="Product 3">
+				<p>Adidas</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="reebok.jpg" alt="Product 3">
+				<p>Reebok</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+        <br><br>
+        
+        
+		<h3>Ornaments</h3>
+		<div class="product-list">
+            <div class="product">
+                <img src="bracelet.jpg" alt="Product 3">
+				<p>Bracelet</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+                <img src="earrings.jpg" alt="Product 3">
+				<p>Earrings</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+				<img src="neckpiece.jpg" alt="Product 3">
+				<p>Neckpiece</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+                <img src="ring.webp" alt="Product 3">
+				<p>Ring</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+			<div class="product">
+                <img src="watch.jpg" alt="Product 3">
+				<p>Watch</p>
+				<p class="price">$39.99</p>
+				<a href="#" class="button">Add to Cart</a>
+			</div>
+		</div>
+    </section>
+        <footer>
+            <p>&copy; 2023 COZ Art Website. All rights reserved.</p>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/1234567890.js" crossorigin="anonymous"></script>
+</body>
+</html>
